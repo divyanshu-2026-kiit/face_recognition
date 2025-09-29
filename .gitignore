@@ -1,0 +1,17 @@
+# Python gitignore 
+# Virtual environments
+env/
+venv/
+python/env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+*.env
+
+# OS junk
+.DS_Store
+Thumbs.db
