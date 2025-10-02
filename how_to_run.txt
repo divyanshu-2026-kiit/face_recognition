@@ -1,0 +1,59 @@
+1. Clone the Repository
+Open a terminal(CMD) and run these commands:
+
+git clone https://github.com/divyanshu-2026-kiit/face_recognition.git
+
+cd face_recognition
+
+2. Set Up the Python Environment
+Create & Activate Virtual Environment:
+
+python -m venv venv
+
+venv\Scripts\activate
+
+3. Install Python Dependencies
+pip install -r requirements.txt
+
+4. go to any browser 
+-> mongo db atlas 
+-> create/login to your account 
+-> on welcome  to atlas page, scroll down and skip personalization
+-> on deploy your cluster page select free
+-> in configuration give a name to your cluster
+-> provider aws
+-> region Mumbai
+-> in quick setup: uncheck preload sample dataset
+-> create deployment
+-> connect to cluster page will appear
+-> scroll down and change username and password according to need and save it somewhere (important)
+-> create database user
+-> choose a connection method
+-> under connect to your application, click on drivers
+-> select driver: node.js
+-> select version: 4.0 or later
+-> follow step 2 given on the page
+-> from step 3, make sure show password is enabled, copy the connection string and save it somewhere (important)
+
+5. Create a (.env) file inside the backend folder and paste these into the file:
+
+PORT=4000
+MONGO_URI= paste the connection string here
+DATASET_DIR=./storage/dataset
+MODEL_DIR=./storage/models
+PYTHON=python
+
+and put this file into backend folder
+
+6. open cmd, go into backend folder and run this command:
+node server.js
+
+7. open cmd go into python folder and run this command:
+python face_service.py
+
+8. open cmd go into frontend folder and run this command:
+npm run dev
+
+9. check for url given by frontend terminal, copypaste in browser
+
+
